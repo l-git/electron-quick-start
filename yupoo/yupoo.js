@@ -6,6 +6,8 @@ var download=require('./../js/download.js');
 
 var crawler=require('./crawler.js');
 
+var Referer=require('../js/referer')
+
 var yupoo={
 
     init:function(){
@@ -38,6 +40,7 @@ var yupoo={
             var pageOj={};
             pageOj.fileName=name;
 
+            Referer.setReferer(url)
             var downloadObjList=crawler.yupooCrawler(url,pageOj);
 
             console.log(downloadObjList);

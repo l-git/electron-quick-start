@@ -18,6 +18,7 @@ var crawler={
                 console.log("Error: " + error);
                 layer.msg('url error '+pageUrl);
             }else if (response.statusCode === 200) {
+                debugger
                 var $$ = cheerio.load(body);
         
 

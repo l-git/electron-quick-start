@@ -3,7 +3,7 @@ var url = require('url');
 var http = require('http');
 var exec = require('child_process').exec;
 var spawn = require('child_process').spawn;
-
+var Referer=require('./referer')
 
 var download={
 
@@ -39,10 +39,16 @@ var download={
 
         // Function to download file using HTTP.get
         var download_file_httpget = function(file_url) {
+
+            var r=Referer.getReferer()
+
         var options = {
             host: url.parse(file_url).host,
             port: 80,
-            path: url.parse(file_url).pathname
+            path: url.parse(file_url).pathname,
+            headers:{
+                'Referer':r
+            }
         };
 
         //var file_name = url.parse(file_url).pathname.split('/').pop();
