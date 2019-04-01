@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>yupoo</title>
+      <meta charset="utf8"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <meta name="referrer" content="never">
+
+      <!-- 引入 Bootstrap -->
+      <link href="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
+ 
+      <!-- HTML5 Shiv 和 Respond.js 用于让 IE8 支持 HTML5元素和媒体查询 -->
+      <!-- 注意： 如果通过 file://  引入 Respond.js 文件，则该文件无法起效果 -->
+      <!--[if lt IE 9]>
+         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+         <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+      <![endif]-->
+   </head>
+   <body>
+      <div style="text-align: center;vertical-align: middle;margin-top:120px;">
+
+        <div class="container">
+          <div class="row" >
+              <div class="col-md-12 col-md-12" 
+                  style="">
+                  <form class="form-horizontal" role="form">
+                    <div class="form-group">
+                      <label class="col-md-2 control-label">url</label>
+                      <div class="col-md-6">
+                        <input type="text" class="form-control" id="url" placeholder="请输入" value="http://x.yupoo.com/photos/ysly/albums/6231270?uid=1">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="inputPassword" class="col-md-2 control-label">name</label>
+                      <div class="col-md-6">
+                        <input type="text" class="form-control" id="name" placeholder="请输入" value="3136-790非如实描述 (1).jpg">
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      
+                      <div class="col-md-6">
+                        <button type="button" class="btn btn-primary" id="startDownload">开始下载</button>
+                      </div>
+                    </div>
+                    
+
+                  </form>
+              </div>
+              
+          </div>
+      </div>
+
+
+      </div>
+
+      <div>
+
+        <div class="panel panel-default" id="msg" style="min-height: 340px;max-height: 340px;overflow: auto;">
+          <div class="panel-body">
+            <ul class="list-group" id="msgUl">
+              <li class="list-group-item">download list</li>
+          </ul>
+          </div>
+      </div>
+
+      </div>
+
+      <!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->
+      <script src="https://cdn.bootcss.com/jquery/1.9.1/jquery.js"></script>
+      <!-- 包括所有已编译的插件 -->
+      <script src="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/js/bootstrap.js"></script>
+
+      <script src="https://cdn.bootcss.com/layer/2.3/layer.js"></script>
+
+
+      <script>
+        // You can also require other files to run in this process
+        var yupoo=require('./yupoo/yupoo.js');
+        yupoo.init();
+      </script>
+
+   </body>
+</html>
